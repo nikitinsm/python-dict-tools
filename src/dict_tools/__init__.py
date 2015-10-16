@@ -61,3 +61,10 @@ def copy(d):
         elif isinstance(v, list):
             out[k] = v[:]
     return out
+
+
+def expand(*path, **kwargs):
+    chain = kwargs.get('value') or None
+    for segment in reversed(path):
+        chain = { segment: chain }
+    return chain
