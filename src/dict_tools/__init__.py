@@ -1,6 +1,9 @@
 import collections
 
 
+__all__ = ['get', 'merge', 'copy', 'expand']
+
+
 def get(d, *path, **kwargs):
     default = kwargs.get('default', None)
     strict = kwargs.get('strict', False)
