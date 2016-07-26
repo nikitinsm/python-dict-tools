@@ -12,4 +12,4 @@ install:
   - pip install nose coverage coveralls
 after_success:
   - coveralls
-script: nosetests --cover-erase --with-coverage --cover-package=ressy
+script: nosetests --cover-erase --with-coverage --cover-package=dict_tools
