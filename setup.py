@@ -10,7 +10,7 @@ setup\
     , author='Sergey Nikitin'
     , author_email='nikitinsm@gmail.com'
     , url='https://github.com/nikitinsm/python-dict-tools'
-    , packages = find_packages('src')
-    , package_dir = {'': 'src'}
-    , include_package_data = True
+    , packages=find_packages('src')
+    , package_dir={'': 'src'}
+    , include_package_data=True
     )
