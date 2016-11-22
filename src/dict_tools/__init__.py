@@ -53,7 +53,7 @@ def merge(d1, d2):
     if sys.version.startswith('2'):
         items_method = 'iteritems'
 
-    for k, v in getattr(d1, items_method)():
+    for k, v in getattr(d2, items_method)():
         if isinstance(v, collections.Mapping):
             r = merge(d1.get(k, {}), v)
             d1[k] = r
