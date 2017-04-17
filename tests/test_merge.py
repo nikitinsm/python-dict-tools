@@ -30,9 +30,9 @@ class MergeTest(unittest.TestCase):
             }
         }
 
-        print d_expecting
+        print(d_expecting)
         result = merge(d1, d2)
-        print result
+        print(result)
         self.assertDictEqual(result, d_expecting)
 
 
