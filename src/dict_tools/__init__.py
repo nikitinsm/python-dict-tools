@@ -1,4 +1,5 @@
 import collections
+import sys
 
 
 __all__ = ['get', 'merge', 'copy', 'expand']
@@ -47,7 +48,12 @@ def get(d, *path, **kwargs):
 
 
 def merge(d1, d2):
-    for k, v in d2.iteritems():
+    items_method = 'items'
+
+    if sys.version.startswith('2'):
+        items_method = 'iteritems'
+
+    for k, v in getattr(d2, items_method)():
         if isinstance(v, collections.Mapping):
             r = merge(d1.get(k, {}), v)
             d1[k] = r
